@@ -1,0 +1,2 @@
+AWS_REGION = "us-east-1"
+MODEL_ID = "arn:aws:bedrock:us-east-1:xxxx:inference-profile/us.anthropic.claude-3-7-sonnet-20250219-v1:0" # under Inference and assessement --> corss-region inference --> claude 3.7 " # under Inference and assessement --> corss-region inference --> claude 3.7 eg. 
