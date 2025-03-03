@@ -47,7 +47,7 @@ buy-vs-rent/
 
 ## Running the Analysis:
 ```bash
-python main.py 10001
+streamlit run src/app.py
 ```
 
 ## Contributing:
