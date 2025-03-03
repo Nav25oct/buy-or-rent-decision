@@ -35,6 +35,13 @@ export AWS_SECRET_ACCESS_KEY=YOUR_SECRET_KEY
 export AWS_REGION=us-east-1
 ```
 
+### update the cofig file (config.py):
+Ensure your MODEL ID are set up correctly.
+```bash
+AWS_REGION = "us-east-1"
+MODEL_ID = "arn:aws:bedrock:us-east-1:xxxx:inference-profile/us.anthropic.claude-3-7-sonnet-20250219-v1:0" # under Inference and assessement --> corss-region inference --> claude 3.7 " # under Inference and assessement --> corss-region inference --> claude 3.7 eg. 
+```
+
 ## Understanding the Project Structure:
 ```
 buy-vs-rent/
