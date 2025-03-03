@@ -45,7 +45,7 @@ buy-vs-rent/
 │── README.md           # Instructions (this file)
 ```
 
-## Running the Analysis:
+## Running the Analysis through steamlit app:
 ```bash
 streamlit run src/app.py
 ```
