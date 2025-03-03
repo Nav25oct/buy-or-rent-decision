@@ -9,15 +9,14 @@ st.caption("🚀 **Powered by Amazon Bedrock & Claude 3.7 Reasoning Model**")
 
 # User Inputs
 zip_code = st.text_input("Enter Zip Code", "10001")
-home_price = st.number_input("Home Price ($)", min_value=10000, value=500000, step=1000)
-monthly_rent = st.number_input("Monthly Rent ($)", min_value=500, value=2500, step=50)
+home_price = st.number_input("Home Price ($)", min_value=10000, value=1000000, step=10000)
+monthly_rent = st.number_input("Monthly Rent ($)", min_value=500, value=5000, step=500)
 interest_rate = st.slider("Mortgage Interest Rate (%)", min_value=1.0, max_value=10.0, value=7.0, step=0.1)
 loan_term = st.selectbox("Loan Term (Years)", [15, 30], index=1)
 tax_rate = st.slider("Property Tax Rate (%)", min_value=0.5, max_value=3.0, value=1.2, step=0.1)
 
-# Button to Get AI Analysis
 if st.button("Analyze Decision"):
-    # Create market data dictionary
+    # Create market data dictionary from user input
     market_data = {
         "zip_code": zip_code,
         "property_price": home_price,
@@ -27,12 +26,12 @@ if st.button("Analyze Decision"):
         "tax_rate": tax_rate,
     }
     
-    # Get AI response
-    response = decide_buy_or_rent(market_data)
+    # Call AI model with user input
+    response = decide_buy_or_rent(market_data)  # ✅ Now passing full data
 
-    # Display AI's reasoning process
+    # Display AI response
     st.subheader("🤖 AI's Reasoning & Analysis")
-    st.markdown(response)  # This will show Claude's step-by-step output
+    st.markdown(response)
 
 # Footer
 st.markdown("---")
