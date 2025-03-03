@@ -66,20 +66,18 @@ def ask_claude_for_decision(market_data):
     return ai_reasoning + final_response
 
 # Example function to retrieve real estate data (mocked for testing)
-def get_market_data(zip_code):
-    # Simulating real estate market data
-    return {
-        "zip_code": zip_code,
-        "property_price": 500000,
-        "monthly_rent": 2500,
-        "interest_rate": 7.0,
-        "tax_rate": 1.2
-    }
+# def get_market_data(zip_code):
+#     return {
+#         "zip_code": zip_code,
+#         "property_price": 500000,
+#         "monthly_rent": 2500,
+#         "interest_rate": 7.0,
+#         "tax_rate": 1.2
+#     }
 
 # Function to decide between buying or renting
-def decide_buy_or_rent(zip_code):
-    market_data = get_market_data(zip_code)
-    decision = ask_claude_for_decision(market_data)
+def decide_buy_or_rent(market_data):
+    decision = ask_claude_for_decision(market_data)  # Directly pass user input
     return decision
 
 # Run analysis for a sample ZIP code (for testing)
