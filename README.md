@@ -7,6 +7,10 @@ This project uses Amazon Bedrock Claude 3.7 to analyze real estate data and reco
 - Compares mortgage costs vs. rent costs
 - Evaluates long-term financial implications
 
+## High Level Architecture Diagram
+
+![Architecture Diagram](https://github.com/Nav25oct/buy-or-rent-decision/blob/main/buyvsrent_highlevel_architecure.png)
+
 ## Installation
 
 ### Clone the Repository:
