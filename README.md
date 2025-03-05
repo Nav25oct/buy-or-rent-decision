@@ -18,6 +18,7 @@ cd buy-or-rent-decision
 ### Install Dependencies:
 ```bash
 pip install -r requirements.txt
+playwright install
 ```
 
 ### Configure AWS Credentials:
