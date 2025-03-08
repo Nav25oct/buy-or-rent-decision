@@ -15,6 +15,10 @@ interest_rate = st.slider("Mortgage Interest Rate (%)", min_value=1.0, max_value
 loan_term = st.selectbox("Loan Term (Years)", [15, 30], index=1)
 tax_rate = st.slider("Property Tax Rate (%)", min_value=0.5, max_value=3.0, value=1.2, step=0.1)
 
+# New Inputs: Down Payment & Rent Affordability
+down_payment = st.number_input("Down Payment ($)", min_value=0, value=200000, step=5000)
+max_rent_affordability = st.number_input("Max Affordable Rent ($)", min_value=500, value=6000, step=500)
+
 if st.button("Analyze Decision"):
     # Create market data dictionary from user input
     market_data = {
@@ -24,6 +28,8 @@ if st.button("Analyze Decision"):
         "interest_rate": interest_rate,
         "loan_term": loan_term,
         "tax_rate": tax_rate,
+        "down_payment": down_payment,
+        "max_rent_affordability": max_rent_affordability,
     }
     
     # Call AI model with user input
